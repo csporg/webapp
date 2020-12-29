@@ -18,15 +18,15 @@ $sudo yum update -y && sudo yum install epel-release -y && sudo yum install wget
 
 $sudo yum install python-pip -y
 
-$sudo yum install mysql mysql-devel mysql-common mysql-libs gcc  python-devel -y
+$sudo yum install mysql mysql-devel mysql-common mysql-libs gcc  python3-devel -y
 
-$sudo pip install Flask
+$sudo pip3 install Flask
 
-$sudo pip install mysqlclient==1.3.1
+$sudo pip3 install mysqlclient==1.3.1
 
-$sudo pip install Flask-MySQLdb
+$sudo pip3 install Flask-MySQLdb
 
-$pip install gunicorn
+$pip3 install gunicorn
 
 $git clone https://github.com/csporg/webapp.git
 
