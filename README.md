@@ -26,6 +26,8 @@ $sudo pip install mysqlclient==1.3.1
 
 $sudo pip install Flask-MySQLdb
 
+$pip install gunicorn
+
 $git clone https://github.com/csporg/webapp.git
 
 $cd ./webapp/src/flask
