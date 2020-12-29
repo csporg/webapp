@@ -26,10 +26,18 @@ $sudo pip install mysqlclient==1.3.1
 
 $sudo pip install Flask-MySQLdb
 
- gunicorn --bind 0.0.0.0:8083 wsgi
+$git clone https://github.com/csporg/webapp.git
+
+$cd src/flask
+
+$gunicorn --bind 0.0.0.0:5001 wsgi
  
- https://pybuilder.io/documentation/tutorial
- https://github.com/pyclectic/flask-example
+ 
+Reeference: 
+ 
+https://pybuilder.io/documentation/tutorial
+ 
+https://github.com/pyclectic/flask-example
 
 Backend  MySQL 
 ------------------------
