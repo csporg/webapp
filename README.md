@@ -28,7 +28,7 @@ $sudo pip install Flask-MySQLdb
 
 $git clone https://github.com/csporg/webapp.git
 
-$cd ~/webapp/src/flask
+$cd ./webapp/src/flask
 
 $gunicorn --bind 0.0.0.0:5001 wsgi
  
