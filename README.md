@@ -67,9 +67,9 @@ $mysqladmin -u root -p version
 
 Python Flask
 --------------
-docker image build -t flask-image .
+$docker image build -t flask --network host  .
 
-docker run --name flask-containergunci -p 5001:5001 -d flask-image
+$docker run -d --name flask -p 5001:5001 flask
 
 https://medium.com/@tasnuva2606/dockerize-flask-app-4998a378a6aa
 
@@ -80,14 +80,6 @@ MySQL
 ----------
 $docker image build -t mysql .
 
-$docker container run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Root_123 mysql
-
-or 
-
-$docker login
-
-$docker pull csporg/mysql
-
-$docker container run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Root_123 csporg/mysql
+$docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Root_123 mysql
 
 https://medium.com/better-programming/customize-your-mysql-database-in-docker-723ffd59d8fb
