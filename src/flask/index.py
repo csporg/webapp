@@ -4,8 +4,8 @@ application = Flask(__name__)
 
 #configure db
 application.config['MYSQL_HOST'] = '192.168.1.7'
-application.config['MYSQL_USER'] = 'krishna'
-application.config['MYSQL_PASSWORD'] = 'Krishna_123'
+application.config['MYSQL_USER'] = 'cloud'
+application.config['MYSQL_PASSWORD'] = 'Cloud_123'
 application.config['MYSQL_DB'] = 'indigo'
 mysql = MySQL(application)
 
