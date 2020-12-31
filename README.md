@@ -78,8 +78,8 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-o
 
 MySQL
 ----------
-docker build -t my-mysql .
+$docker image build -t mysql .
 
-docker run -d -p 3306:3306 --name my-mysql -e MYSQL_ROOT_PASSWORD=Root_123 my-mysql
+$docker container run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Root_123 mysql
 
 https://medium.com/better-programming/customize-your-mysql-database-in-docker-723ffd59d8fb
