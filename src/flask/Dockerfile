@@ -13,4 +13,4 @@ RUN yum install gcc  -y
 RUN yum install python3-devel  -y
 RUN pip3 install -r requirements.txt
 RUN export $(grep -v '^#' ./env/development.env | xargs)
-CMD ["sh","start.sh"]
+CMD ["sh","entrypoint.sh"]
