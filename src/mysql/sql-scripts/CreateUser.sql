@@ -1,3 +1,3 @@
-CREATE USER 'krishna'@'%' IDENTIFIED BY 'Krishna_123';
-GRANT ALL PRIVILEGES ON *.* TO 'krishna'@'%';
+CREATE USER 'cloud'@'%' IDENTIFIED BY 'Cloud_123';
+GRANT ALL PRIVILEGES ON *.* TO 'cloud'@'%';
 FLUSH PRIVILEGES;
