@@ -49,7 +49,7 @@ $md5sum mysql57-community-release-el7-9.noarch.rpm
 
 $sudo rpm -ivh mysql57-community-release-el7-9.noarch.rpm
 
-$sudo yum install mysql-server
+$sudo yum install mysql-server -y
 
 $sudo systemctl start mysqld
 
@@ -60,6 +60,28 @@ $sudo grep 'temporary password' /var/log/mysqld.log
 $sudo mysql_secure_installation
 
 $mysqladmin -u root -p version
+
+Step 3:create database and user for MySQL
+
+$mysql -u <> -p
+
+mysql>create database indigo;
+
+mysql>CREATE USER 'cloud'@'%' IDENTIFIED BY 'Cloud_123';
+
+or
+
+CREATE USER 'cloud'@'%' IDENTIFIED WITH mysql_native_password BY 'Cloud_123';
+
+mysql>GRANT ALL ON . TO ''@'%';
+
+mysql>FLUSH PRIVILEGES;
+
+$git clone https://github.com/krishnamaram2/binary-code.git
+
+$mysql -u cloud -p cloudstones < binary-code/binaries/cloudstones.sql
+
+
 
 
                                                Distributed Web App
