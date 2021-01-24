@@ -34,6 +34,7 @@ $cd ./webapp/src/flask
 
 $gunicorn --bind 0.0.0.0:5001 wsgi
  
+http://<public_ip>:5001/
  
 Reeference: 
  
