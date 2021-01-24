@@ -63,9 +63,9 @@ $mysqladmin -u root -p version
 
 Step 3:create database and user for MySQL
 
-$mysql -u <> -p
+$mysql -u root -p
 
-mysql>create database indigo;
+mysql>create database cloudstones;
 
 mysql>CREATE USER 'cloud'@'%' IDENTIFIED BY 'Cloud_123';
 
@@ -73,7 +73,7 @@ or
 
 CREATE USER 'cloud'@'%' IDENTIFIED WITH mysql_native_password BY 'Cloud_123';
 
-mysql>GRANT ALL ON . TO ''@'%';
+mysql>GRANT ALL ON *.* TO 'cloud'@'%';
 
 mysql>FLUSH PRIVILEGES;
 
