@@ -77,9 +77,9 @@ mysql>GRANT ALL ON *.* TO 'cloud'@'%';
 
 mysql>FLUSH PRIVILEGES;
 
-$git clone https://github.com/krishnamaram2/binary-code.git
+$git clone https://github.com/csporg/webapp.git
 
-$mysql -u cloud -p cloudstones < binary-code/binaries/cloudstones.sql
+$mysql -u cloud -p cloudstones < webapp/src/mysql/cloudstones.sql
 
 
 
