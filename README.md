@@ -116,7 +116,17 @@ $docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Root_123 mysql
 https://medium.com/better-programming/customize-your-mysql-database-in-docker-723ffd59d8fb
 
 
+# Registry
 
+$docker image tag flask csporg/flask:master_1
+
+$docker image push csporg/flask:master_1
+
+$docker login
+
+$docker pull csporg/flask:master_1
+
+$docker run -d --name flask -p 5001:5001 csporg/flask:master_1
 
 
 # Registry
@@ -129,6 +139,6 @@ $docker login
 
 $docker pull csporg/mysql:master_1
 
-$docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Root_123 csporg/mysql
+$docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Root_123 csporg/mysql:master_1
 
 
