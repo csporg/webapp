@@ -90,6 +90,10 @@ $mysql -u cloud -p cloudstones < webapp/src/mysql/cloudstones.sql
 
 Python Flask
 --------------
+$git clone https://github.com/csporg/webapp.git
+
+$cd webapp/src/flask
+
 $docker image build -t flask --network host  .
 
 $docker run -d --name flask -p 5001:5001 flask
@@ -101,6 +105,10 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-o
 
 MySQL
 ----------
+$git clone https://github.com/csporg/webapp.git
+
+$cd webapp/src/mysql
+
 $docker image build -t mysql .
 
 $docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Root_123 mysql
