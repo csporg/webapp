@@ -94,7 +94,7 @@ $git clone https://github.com/csporg/webapp.git
 
 $cd webapp/src/flask
 
-$docker image build -t flask --network host  .
+$docker image build -t flask .  or $docker image build -t flask --network host  .
 
 $docker run -d --name flask -p 5001:5001 flask
 
@@ -113,9 +113,16 @@ $docker image build -t mysql .
 
 $docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Root_123 mysql
 
+
+
+
+
+
+
+
 $docker image tag mysql csporg/mysql:master_1
 
-or 
+$docker image push 
 
 $docker login
 
