@@ -11,6 +11,22 @@ MySQL
                                                              
                                                              
                                                Traditional Web App
+                                               
+Haproxy Load Balancer
+======================
+
+$yum install haproxy -y
+
+$git clone https://github.com/csporg/webapp.git
+
+$cp webapp/src/haproxy/haproxy.cfg  /etc/haproxy  
+
+$sudo haproxy -f /etc/haproxy/haproxy.cfg -c
+
+$sudo systemctl restart haproxy
+
+#sed -i 's/stats auth admin:admin123/stats auth admin:admin4455/g' /etc/haproxy/haproxy.cfg
+                                               
                                                            
 Middle ware Python Flask
 -----------------------------------
@@ -86,6 +102,21 @@ $mysql -u cloud -p cloudstones < webapp/src/mysql/cloudstones.sql
 
 
                                                Distributed Web App
+                                               
+Haproxy Load balancer
+======================
+$git clone https://github.com/csporg/webapp.git
+
+$cd webapp/src/haproxy
+
+$ docker build -t my-haproxy .
+
+$ docker run -it --rm my-haproxy haproxy -c -f /usr/local/etc/haproxy/haproxy.cfg
+
+$ docker run -d --name my-running-haproxy -p 80:80 my-haproxy
+
+Reference: https://github.com/haproxytech/haproxy-docker-alpine
+
 
 
 Python Flask
