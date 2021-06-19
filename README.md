@@ -172,4 +172,5 @@ $docker pull csporg/mysql:master_1
 
 $docker run -d --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Root_123 csporg/mysql:master_1
 
-
+# Flask CRUD App
+https://www.loginworks.com/blogs/making-web-application-crud-using-flask-and-mysql/
